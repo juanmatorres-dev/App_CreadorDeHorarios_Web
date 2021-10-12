@@ -1,0 +1,659 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    margin: 0;
+    background-color: #E1E1E9;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1 {
+    /*
+    margin: 0;
+    background-color: #34344C;
+    color: white;
+    font-size: 400%;
+    text-align: center;
+    position: fixed;
+    */
+
+    position: static;
+    margin-top: 0px;
+    width: 100%;
+    background-color: #34344C;
+    /* padding: 0 100px; */
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    z-index: 2;
+    color: white;
+    font-size: 400%;
+    text-align: center;
+}
+
+section{
+    position: relative;
+    top: 2rem;
+    margin: 0 auto;
+    width: 35%;
+    border-left: #34344C  3px;
+    border-right: #34344C  3px;
+}
+
+
+.separacion_entre_cajones {
+    margin-bottom: 50px;
+}
+
+/* No usada actualmente */
+.internet {
+    position: absolute;
+    top: 7rem;
+    /*right: -60%;*/
+    left: 60%;
+    width: 35%;
+    border-left: #34344C solid 3px;
+    border-right: #34344C solid 3px;
+}
+
+h2 {
+    margin: 1rem;
+    background-color: #33354D;
+    color: white;
+    font-size: 205%;
+    text-align: center;
+    border-radius: 50px;
+    width: 109% ;
+    margin-left: -5%;
+}
+
+article {
+    border-radius: 10px;
+    margin: 25px ;
+    padding-bottom: 1px;
+    background-color: #FFFFFF;
+}
+
+h3 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-left: 4.5px;
+    background-color: #29A333;
+    font-size: 150%;
+    color: white;  /* Lo he añadido en lo del pdf */
+    margin: 0;       /* Lo he añadido para evitar el salto de línea natura de la etiqueta h3 
+                        , esto provocaba un espacio que no se corresponde con la foto de la 
+                        solución , por eso lo he añadido  */
+}
+
+p {
+    margin: 5px;
+    padding: 10px;
+    font-size: 17px;
+    display: inline-block;
+}
+
+
+.social-icons{
+    font-size: 30px;
+    text-decoration: none;
+}
+
+
+
+.separar_artistas{
+
+    padding: 5px;
+   
+}
+
+
+.licencia{
+    margin: 0 auto;
+    display: flex;
+    
+}
+
+.centrar_texto{
+    display: flow-root; 
+    text-align: center;
+    /* margin-left: 44.4%; */
+}
+
+
+
+
+        /* Modal */
+
+
+        .titulo-modal{
+            background-color: #557a9e;
+            margin-left: 20px;
+        }
+
+        .flex {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .textos {
+            padding: 300px;
+            color: #fff;
+            text-align: center;
+        }
+
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            overflow: auto;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.452);
+            z-index: 3;
+        }
+
+        .contenido-modal {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            width: 30%;
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
+            animation-name: modal;
+            animation-duration: 1s;
+        }
+
+        @keyframes modal {
+            from {
+                top: -330px;
+                opacity: 0;
+            }
+
+            to {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        .close {
+            color: #f2f2f2;
+            font-size: 30px;
+            font-weight: 100;
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+
+        .close:hover {
+            color: #7f8c8d;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-header,
+        .footer {
+            padding: 10px 0px;
+            background: #557a9e;
+            color: #f2f2f2;
+        }
+
+
+        .modal-body {
+            padding: 20px 16px;
+        }
+
+        @media screen and (max-width:900px) {
+            .contenido-modal {
+                width: 70%;
+            }
+
+            .textos {
+                padding: 150px;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            .textos {
+                padding: 50px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsivo (Pone las cajas una debajo de la otra además de reducir los tamaños de letras de algunos títulos ) */
+
+@media screen and (max-width: 1024px){
+    h1 {
+      font-size: 300%;
+    }
+  
+    h2 {
+        width: 90%;
+        margin-left: 5%;
+
+         /* margin: 20px; */
+        font-size: 150%;
+    }
+    
+    .separacion_entre_cajones{
+        position: static;  /* Static hace que la caja no se mueva */
+        top: 6rem;
+        left: 1.1%;
+        width: 100%;
+        border-left: #34344C  3px;
+        border-right: #34344C  3px;   
+    }
+    .internet {
+        position: static;   /* Este atributo permite que la caja de arriba empuje a la de abajo cuando se valla estrechando la pantalla */
+        top: 83%;
+        right: 9.7%;
+        width: 100%;
+        border-left: #34344C  3px;
+        border-right: #34344C  3px;
+    }
+
+    /* Antigua forma de hacer los dos bloques de arriba ( por id ) | Código duplicado de otra forma ( solo los dos bloques de arriba ) */
+    /*
+    section#escritorio {
+      position: static;  /* Static hace que la caja no se mueva *
+      top: 6rem;
+      left: 1.1%;
+      width: 100%;
+      border-left: #34344C  3px;
+      border-right: #34344C  3px;
+    }
+    */
+    /*
+  section#internet {
+      position: sticky;   /* Este atributo permite que la caja de arriba empuje a la de abajo cuando se valla estrechando la pantalla *
+      top: 83%;
+      right: 9.7%;
+      width: 100%;
+      border-left: #34344C  3px;
+      border-right: #34344C  3px;
+  }
+  */
+
+  
+  .indice_grande{
+      display: none;
+  }
+ 
+
+
+   
+}
+
+
+@media screen and (max-width: 1675px){
+    
+    .indice_grande{
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+.imagenes{
+    /* border: 3px solid blue; */
+    
+    height: 0px;
+    padding-bottom: 56.25%;
+    position: relative;
+
+    
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 5%;
+    width: 95%;
+}
+
+
+
+.imagenes img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+nav {
+    position: fixed;  /* Nota: El posicionamiento fijo en css es el fixed sino aplicamos este las propiedades top y left no surtiran efecto sobre la etiqueta nav ya que se quedara igual como sino las pongamos  */
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 0px;
+    background-color: #32354C;
+    max-height: 100%;
+    overflow: auto;
+    overflow-y: auto;
+}
+
+nav a{
+    margin-left: -35px;
+    color: white;
+}
+
+.estilos_lista{
+    list-style: none;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.estilos_lista a{
+    color: white;
+}
+
+.sublista{
+    margin-top: 5px;
+}
+
+
+/*
+.primera_separacion{
+    padding-top: 2px;
+}
+*/
+
+.boton_menu{
+    margin-top: 10px;
+    padding: 0px;
+    left: -50px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+
+
+
+.icono {
+    margin-right: 0px;
+    padding-right: 6px;
+    left: -50px;
+    max-height: 65px;
+    font-size: 5px;
+    border-bottom-right-radius: 50px;
+    background-color: #7f8c8d;
+}
+
+.icono ul{
+    list-style: none;
+}
+
+.menu {
+    position: absolute;
+    margin-top: 0px;
+    width: 100%;
+    padding: 0 100px;
+    box-sizing: border-box;
+    border-bottom: 1px rgba(0, 0, 0, .2);
+    z-index: 2;
+}
+
+.menu img {
+    float: left;
+    width: 84px;
+}
+
+
+.indice{
+    position: fixed;  /* Nota: El posicionamiento fijo en css es el fixed sino aplicamos este las propiedades top y left no surtiran efecto sobre la etiqueta nav ya que se quedara igual como sino las pongamos  */
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 0px;
+    background-color: #32354C;
+    max-height: 100%;
+    overflow: auto;
+    overflow-y: auto;
+    z-index: 500;
+}
+
+
+.indice_grande{
+    position: fixed;  /* Nota: El posicionamiento fijo en css es el fixed sino aplicamos este las propiedades top y left no surtiran efecto sobre la etiqueta nav ya que se quedara igual como sino las pongamos  */
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 0px;
+    background-color: #32354C;
+    max-height: 100%;
+    overflow: auto;
+    overflow-y: auto;
+    z-index: 500;
+}
+
+
+
+
+
+
+
+
+
+
+/* Historial de actualizaciones */
+
+
+
+.caja {
+    /* width: 800px; */
+    
+    max-width: 100%;
+    /* Responsivo */
+    margin: -50px 5px 5px;
+    padding: 40px;
+    /* background: #202083; */
+    box-sizing: border-box;
+}
+
+
+.caja ul {
+    margin: 0;
+    padding: 0;
+    border-left: 2px solid #020c1d;
+}
+
+.caja ul li {
+    list-style: none;
+}
+
+
+
+.caja ul li .elemento {
+    position: relative;
+    padding: 30px 20px;
+}
+
+/*
+.caja ul li .elemento:hover {
+    background: #9a9fa8; 
+}
+*/
+
+
+
+.caja ul li .elemento span {
+    padding: 4px 12px;
+    background: #007faf;
+    border-radius: 15px;
+    color: #fff;
+}
+
+/*
+.caja ul li .elemento:hover span {
+    background: #e91e63;
+}
+*/
+
+/*
+.caja ul li .elemento:hover span {
+    background: #e91e63;
+}
+*/
+
+
+
+
+
+
+
+
+
+.caja ul li .elemento:before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: -6px;
+    width: 12px;
+    height: 12px;
+    background: #021434;
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 1);
+}
+
+
+.caja ul li .elemento:after {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: -6px;
+    width: 12px;
+    height: 12px;
+    /* background: #ffa; */
+    border-radius: 50%;
+    /* box-shadow: inset 0 0 10px rgba(255, 255, 0, 1); */
+    opacity: 0;
+}
+
+/* Antigua animación : puntito parpadeante */
+/*
+.caja ul li .elemento:hover:after {
+    animation: animación_puntitos .5s linear infinite;
+}
+*/
+
+
+/* Animación actual : puntito fijo */
+.caja ul li .elemento:hover:after {
+    opacity: 1;
+}
+
+
+/* Estilo elemento nuevo */
+/*
+.nuevo {
+    animation: animación_puntitos .9s linear infinite;
+}
+*/
+
+
+
+
+.caja ul li .elemento h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #76eb0a;
+
+}
+
+/*
+.caja ul li .elemento:hover h3 {
+    color: yellow;
+}
+*/
+
+
+.caja ul li .elemento p {
+    margin: 10px 0 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    font-family: 'Catamaran', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+
+
+
+@keyframes animación_puntitos {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+blockquote {
+    color: white;
+}
+
+
+
+
+
+
+.boton_cerrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 25px; */
+    visibility: hidden;
+}

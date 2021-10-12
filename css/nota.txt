@@ -1,0 +1,1 @@
+este archivo tiene el código que hace responsiva la página

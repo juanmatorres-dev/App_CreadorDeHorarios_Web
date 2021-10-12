@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title> Creador de horarios </title>
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- Permite escalado para dispositivos móviles -->
+  <link href="css/index.css" rel="stylesheet" /> <!-- Css info (nativo) -->
+  <link href="../../../../iconos/fontello-3a405396/css/fontello.css" rel="stylesheet" /> 
+  <link href="../../../../iconos/iconos concretos/fontello/fontello-3d7dc9c8/css/fontello.css" rel="stylesheet" /> 
+  <link rel="stylesheet" href="../../../../iconos/uicons-regular-rounded/css/uicons-regular-rounded.css">
+  <link rel="stylesheet" href="css/pushbar.css"> <!-- https://oncebot.github.io/pushbar.js/ -->
+  <link rel="stylesheet" href="css/venobox.css" type="text/css" media="screen" /> <!-- https://veno.es/venobox/ -->
+
+
+  <link rel="icon" type="image/ico" href="creadorDeHorarios.ico" />
+
+  <script type="text/javascript" src="js/jquery-latest.min.js"></script> <!-- http://code.jquery.com/jquery-latest.min.js -->
+</head>
+
+<body>
+
+
+
+<h1>Creador de horarios</h1>
+<div class="menu">
+  
+
+  <nav class="icono">
+    <ul>
+        <li> <img id="boton_menu" class="boton_menu" data-pushbar-target="indice_de_contenidos" src="../../images/menu.svg" >  </li>
+        
+        <!-- <li class="boton_menu" > <a href="#" id="boton_menu"> &#926; </a> </li> -->
+    </ul>
+  </nav>
+
+</div>
+
+
+
+
+<!-- Indice grande -->
+<div class="indice_grande">
+  <ul>
+    <li class="estilos_lista">
+      <p> <a href="#Descripción"> Descripción</a> </p>
+      <ul class="sublista">
+        <li class="estilos_lista"> <a href="#informacion_basica"> Información básica </a></li>
+        <li class="estilos_lista"> <a href="#caracteristicas"> Características </a></li>
+      </ul>
+    </li>
+    <li class="estilos_lista">
+      <p> <a href="#Capturas de pantalla"> Capturas de pantalla </a> </p>
+      <ul class="sublista">
+        <li class="estilos_lista"> <a href="#pantalla_principal"> Pantalla principal </a></li>
+        <li class="estilos_lista"> <a href="#horario_seleccionado"> Horario seleccionado </a></li>
+        <li class="estilos_lista"> <a href="#horario_seleccionado_sin_bloqueo"> Horario seleccionado sin bloqueo </a></li>
+        <li class="estilos_lista"> <a href="#otro_ejemplo_de_horario_seleccionado"> Otro ejemplo de horario seleccionado </a></li>
+        <li class="estilos_lista"> <a href="#configuracion"> Configuración </a></li>
+        <li class="estilos_lista"> <a href="#configuracion_accion_de_alto_impacto"> Configuración , acción de alto impacto </a></li>
+      </ul>
+    </li>
+    <li class="estilos_lista">
+      <p> <a href="#Instalación"> Instalación </a> </p>
+      <ul class="sublista">
+        <li class="estilos_lista"> <a href="#instalacion_en_Windows_10"> Instalación en Windows 10 </a></li>
+      </ul>
+    </li>
+    <li class="estilos_lista"> <p> <a href="#Descargar"> Descargar  </a> </p> </li>
+    <li class="estilos_lista">
+      <p> <a href="#Ayuda"> Ayuda </a> </p>
+      <ul class="sublista">
+        <li class="estilos_lista"> <a href="#como_crear_un_horario"> Cómo crear un horario </a></li>
+        <li class="estilos_lista"> <a href="#como_entrar_en_un_horario"> Cómo entrar en un horario</a></li>
+        <li class="estilos_lista"> <a href="#como_añadir_tramos_horarios_a_un_horario"> Cómo añadir tramos horarios a un horario </a></li>
+        <li class="estilos_lista"> <a href="#como_activar_el_bloqueo_de_edición_de_horarios"> Cómo activar el bloqueo de edición de horarios </a></li>
+        <li class="estilos_lista"> <a href="#como_imprimir_un_horario"> Cómo imprimir un horario </a></li>
+        <li class="estilos_lista"> <a href="#como_generar_un_horario_en_formato_PDF"> Cómo generar un horario en formato PDF </a></li>
+        <li class="estilos_lista"> <a href="#como_borrar_un_horario"> Cómo borrar un horario </a></li>
+        <li class="estilos_lista"> <a href="#como_hacer_una_copia_de_seguridad_de_los_datos"> Cómo hacer una copia de seguridad de los datos </a></li>
+        <li class="estilos_lista"> <a href="#como_restaurar_una_copia_de_seguridad"> Cómo restaurar una copia de seguridad </a></li>
+      </ul>
+    </li>
+    <li class="estilos_lista">
+      <p> <a href="#Demo"> Demo </a> </p>
+      <ul class="sublista">
+        <li class="estilos_lista"> <a href="#datos_de_ejemplo"> Datos de ejemplo </a></li>
+        <li class="estilos_lista"> <a href="#ejemplo_de_PDF_generados_con_la_aplicación"> Ejemplo de PDF generados con la aplicación </a></li>
+      </ul>
+    </li>
+    <li class="estilos_lista">
+      <p> <a href="#historial_de_actualizaciones"> Historial de actualizaciones </a> </p>
+      <ul class="sublista">
+        <li class="estilos_lista"> <a href="#versiones"> Versiones </a></li>
+        <li class="estilos_lista"> <a href="#version_actual"> Versión actual </a></li>
+      </ul>
+    </li>
+    <li class="estilos_lista">
+      <p> <a href="#Licencia"> Licencia </a> </p>
+      <ul class="sublista">
+        <li class="estilos_lista"> <a href="#informacion_sobre_la_licencia"> Información sobre la licencia </a></li>
+      </ul>
+    </li>
+    <li class="estilos_lista">
+      <p> <a href="#Autor"> Autor </a> </p>
+      <ul class="sublista">
+        <li class="estilos_lista"> <a href="#Juan_Manuel_Torres_Martinez"> Juan Manuel Torres Martínez </a></li>
+      </ul>
+    </li>
+  </ul>
+  
+
+  
+</div>
+
+  
+  <!-- Indice mini -->
+  <div data-pushbar-id="indice_de_contenidos" data-pushbar-direction="left">
+    
+    <div class="indice">
+      <div class="boton_cerrar">
+        <button data-pushbar-close id="cerrar">Cerrar</button>
+      </div>
+      
+      <ul>
+        <li class="estilos_lista">
+          <p> <a href="#Descripción" onclick="cerrarPanel()"> Descripción</a> </p>
+          <ul class="sublista">
+            <li class="estilos_lista"> <a href="#informacion_basica" onclick="cerrarPanel()"> Información básica </a></li>
+            <li class="estilos_lista"> <a href="#caracteristicas" onclick="cerrarPanel()"> Características </a></li>
+          </ul>
+        </li>
+        <li class="estilos_lista">
+          <p> <a href="#Capturas de pantalla" onclick="cerrarPanel()"> Capturas de pantalla </a> </p>
+          <ul class="sublista">
+            <li class="estilos_lista"> <a href="#pantalla_principal" onclick="cerrarPanel()"> Pantalla principal </a></li>
+            <li class="estilos_lista"> <a href="#horario_seleccionado" onclick="cerrarPanel()"> Horario seleccionado </a></li>
+            <li class="estilos_lista"> <a href="#horario_seleccionado_sin_bloqueo" onclick="cerrarPanel()"> Horario seleccionado sin bloqueo </a></li>
+            <li class="estilos_lista"> <a href="#otro_ejemplo_de_horario_seleccionado" onclick="cerrarPanel()"> Otro ejemplo de horario seleccionado </a></li>
+            <li class="estilos_lista"> <a href="#configuracion" onclick="cerrarPanel()"> Configuración </a></li>
+            <li class="estilos_lista"> <a href="#configuracion_accion_de_alto_impacto" onclick="cerrarPanel()"> Configuración , acción de alto impacto </a></li>
+          </ul>
+        </li>
+        <li class="estilos_lista">
+          <p> <a href="#Instalación" onclick="cerrarPanel()"> Instalación </a> </p>
+          <ul class="sublista">
+            <li class="estilos_lista"> <a href="#instalacion_en_Windows_10" onclick="cerrarPanel()"> Instalación en Windows 10 </a></li>
+          </ul>
+        </li>
+        <li class="estilos_lista"> <p> <a href="#Descargar" onclick="cerrarPanel()"> Descargar  </a> </p> </li>
+        <li class="estilos_lista">
+          <p> <a href="#Ayuda" onclick="cerrarPanel()"> Ayuda </a> </p>
+          <ul class="sublista">
+            <li class="estilos_lista"> <a href="#como_crear_un_horario" onclick="cerrarPanel()"> Cómo crear un horario </a></li>
+            <li class="estilos_lista"> <a href="#como_entrar_en_un_horario" onclick="cerrarPanel()"> Cómo entrar en un horario</a></li>
+            <li class="estilos_lista"> <a href="#como_añadir_tramos_horarios_a_un_horario" onclick="cerrarPanel()"> Cómo añadir tramos horarios a un horario </a></li>
+            <li class="estilos_lista"> <a href="#como_activar_el_bloqueo_de_edición_de_horarios" onclick="cerrarPanel()"> Cómo activar el bloqueo de edición de horarios </a></li>
+            <li class="estilos_lista"> <a href="#como_imprimir_un_horario" onclick="cerrarPanel()"> Cómo imprimir un horario </a></li>
+            <li class="estilos_lista"> <a href="#como_generar_un_horario_en_formato_PDF" onclick="cerrarPanel()"> Cómo generar un horario en formato PDF </a></li>
+            <li class="estilos_lista"> <a href="#como_borrar_un_horario" onclick="cerrarPanel()"> Cómo borrar un horario </a></li>
+            <li class="estilos_lista"> <a href="#como_hacer_una_copia_de_seguridad_de_los_datos" onclick="cerrarPanel()"> Cómo hacer una copia de seguridad de los datos </a></li>
+            <li class="estilos_lista"> <a href="#como_restaurar_una_copia_de_seguridad" onclick="cerrarPanel()"> Cómo restaurar una copia de seguridad </a></li>
+          </ul>
+        </li>
+        <li class="estilos_lista">
+          <p> <a href="#Demo" onclick="cerrarPanel()"> Demo </a> </p>
+          <ul class="sublista">
+            <li class="estilos_lista"> <a href="#datos_de_ejemplo" onclick="cerrarPanel()"> Datos de ejemplo </a></li>
+            <li class="estilos_lista"> <a href="#ejemplo_de_PDF_generados_con_la_aplicación" onclick="cerrarPanel()"> Ejemplo de PDF generados con la aplicación </a></li>
+          </ul>
+        </li>
+        <li class="estilos_lista">
+          <p> <a href="#historial_de_actualizaciones" onclick="cerrarPanel()"> Historial de actualizaciones </a> </p>
+          <ul class="sublista">
+            <li class="estilos_lista"> <a href="#versiones" onclick="cerrarPanel()"> Versiones </a></li>
+            <li class="estilos_lista"> <a href="#version_actual" onclick="cerrarPanel()"> Versión actual </a></li>
+          </ul>
+        </li>
+        <li class="estilos_lista">
+          <p> <a href="#Licencia" onclick="cerrarPanel()"> Licencia </a> </p>
+          <ul class="sublista">
+            <li class="estilos_lista"> <a href="#informacion_sobre_la_licencia" onclick="cerrarPanel()"> Información sobre la licencia </a></li>
+          </ul>
+        </li>
+        <li class="estilos_lista">
+          <p> <a href="#Autor" onclick="cerrarPanel()"> Autor </a> </p>
+          <ul class="sublista">
+            <li class="estilos_lista"> <a href="#Juan_Manuel_Torres_Martinez" onclick="cerrarPanel()"> Juan Manuel Torres Martínez </a></li>
+          </ul>
+        </li>
+      </ul>
+      
+  
+      
+    </div>
+  </div>
+
+
+  <section class="separacion_entre_cajones primera_separacion">
+    <a name="Descripción"></a>
+    <h2>Descripción</h2>
+    <!-- 
+    <article>
+      <h3> Licencia general </h3>
+
+      <p><a href="https://file000.flaticon.com/downloads/license/license.pdf" target="blanck"> Ver
+        </a></p>
+    </article>
+    -->
+    <article>
+      <a name="informacion_basica"></a>
+      <h3>Información básica  </h3>
+     
+      <p>
+        Con el creador de horarios puedes crear horarios que se guardan en una base de datos local , de forma que tu tienes los datos en tu pc , no están en un servidor remoto .
+      </p>
+    
+    </article>
+
+    <article>
+      <a name="caracteristicas"></a>
+      <h3> Características </h3>
+      <p>
+        <i class="fi-rr-minus-small"></i> Crea horarios con su nombre , fecha de creación y fecha de modificación <br/><br/>
+        <i class="fi-rr-minus-small"></i> Accede a un horario y ve rápidamente en que día de la semana estas , gracias al señalador de días <br/><br/>
+        <i class="fi-rr-minus-small"></i> Una vez puestos los intervalos horarios de tu horario , mira la duración total de tu jornada y visualiza en tiempo real el tiempo restante de la misma (se reinicia cada día) <br/><br/>
+        <i class="fi-rr-minus-small"></i> El evento que está ocurriendo actualmente se señala en tiempo real (o en el caso de que sea un horario académico , la asignatura) <br/><br/>
+        <i class="fi-rr-minus-small"></i> Recibe notificaciones de Windows 10 , cada vez que se cambie un evento con el nombre de este (función disponible solo en Windows 10) <br/><br/>
+        <i class="fi-rr-minus-small"></i> Recibe una notificación de Windows 10 cuando hallas terminado tu jornada (función disponible solo en Windows 10) <br/><br/>
+        <i class="fi-rr-minus-small"></i> Imprime en papel tu horario <br/><br/>
+        <i class="fi-rr-minus-small"></i> Botón de bloqueo , que sirve para cuando hallas terminado de editar tu horario se bloque la edición y el botón de añadir fila <br/><br/>
+        <i class="fi-rr-minus-small"></i> Cambia el aspecto del señalador de días y de la barra de tiempo con hasta 3 aspectos distintos <br/><br/>
+        <i class="fi-rr-minus-small"></i> Botón para borrar todos los datos de la aplicación <br/><br/>
+        <i class="fi-rr-minus-small"></i> Reloj integrado en la aplicación <br/><br/>
+      </p>
+    </article>
+
+    
+  </section>
+
+  <section class="separacion_entre_cajones">
+    <a name="Capturas de pantalla"></a>
+    <h2>Capturas de pantalla</h2>
+    <article>
+      <a name="pantalla_principal"></a>
+      <h3> Pantalla principal </h3>
+      <p> 
+        
+        <div class="imagenes">
+          <a class="venobox" href="Capturas CreadorDeHorarios/Pantalla principal.png"> <img src="Capturas CreadorDeHorarios/Pantalla principal.png" />  </a> 
+        </div>
+
+      </p>
+
+
+     
+    </article>
+
+    <article>
+      <a name="horario_seleccionado"></a>
+       <h3>Horario seleccionado</h3>
+      <p>
+        <div class="imagenes">
+          <a class="venobox" href="Capturas CreadorDeHorarios/Horario Seleccionado.png">  <img src="Capturas CreadorDeHorarios/Horario Seleccionado.png"/>  </a> 
+         
+        </div>
+      </p>
+    </article>
+
+    <article>
+      <a name="horario_seleccionado_sin_bloqueo"></a>
+      <h3>Horario seleccionado sin bloqueo</h3>
+     <p>
+       <div class="imagenes">
+        <a class="venobox" href="Capturas CreadorDeHorarios/Horario Seleccionado sin bloqueo.png"> <img src="Capturas CreadorDeHorarios/Horario Seleccionado sin bloqueo.png"/>  </a> 
+         
+       </div>
+     </p>
+   </article>
+
+   <article>
+     <a name="otro_ejemplo_de_horario_seleccionado"></a>
+    <h3>Otro ejemplo de horario seleccionado</h3>
+   <p>
+     <div class="imagenes">
+      <a class="venobox" href="Capturas CreadorDeHorarios/Ejemplo de horario seleccionado.png">  <img src="Capturas CreadorDeHorarios/Ejemplo de horario seleccionado.png"/> </a> 
+       
+     </div>
+   </p>
+  </article>
+
+  <article>
+    <a name="configuracion"></a>
+    <h3>Configuración</h3>
+   <p>
+     <div class="imagenes">
+      <a class="venobox" href="Capturas CreadorDeHorarios/configuración.png">  <img src="Capturas CreadorDeHorarios/configuración.png"/>  </a> 
+      
+     </div>
+   </p>
+ </article>
+
+ <article>
+   <a name="configuracion_accion_de_alto_impacto"></a>
+  <h3>Configuración , acción de alto impacto</h3>
+ <p>
+   <div class="imagenes">
+    <a class="venobox" href="Capturas CreadorDeHorarios/configuración_accion_de_alto_impacto.png">  <img src="Capturas CreadorDeHorarios/configuración_accion_de_alto_impacto.png"/> </a> 
+     
+   </div>
+ </p>
+</article>
+
+  </section>
+
+
+
+
+
+  <section class="separacion_entre_cajones">
+    <a name="Instalación"></a>
+    <h2>Instalación</h2>
+    
+    <article>
+      <a name="instalacion_en_Windows_10"></a>
+      <h3>Instalación en Windows 10 </h3>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>1.</strong> En primer lugar es necesario descargar e instalar un programa externo sobre el que crear la base de datos que usa el programa . 
+        En nuestro caso este programa utiliza  <a href="https://docs.docker.com/docker-for-windows/install/" title="Docker" target="blanck"> Docker <span class="icon-link-ext"></span></a>   , lo descargamos aquí : (deja todo por defecto al instalarlo)  <br/>
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/Docker_descarga.png">  <img src="Instalacion/Docker_descarga.png"/>  </a> 
+         
+        </div>
+
+        
+      </p>
+
+      <p>
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/configuracion_de_instalacion_docker.png"> <img src="Instalacion/configuracion_de_instalacion_docker.png"/>  </a> 
+          
+        </div>
+      </p>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>2.</strong> Una vez instalado hay que reinciar el pc (solo si Docker te lo pide)  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+         &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+           &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;   &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+           &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;   &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+          <br/><br/>
+      </p>
+      
+
+      
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>3.</strong> Abre Docker ;  si te sale este mensaje , significa que hay que instalar la característica necesaria para que Docker funcione (para isntalarla haz click en el enlace del mensaje de Docker , descarga el instalador y sigue el asistente) :   &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+         &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+            <br/><br/>
+        
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/docker_caracteristica_necesaria.png"> <img src="Instalacion/docker_caracteristica_necesaria.png"/> <br/>  </a> 
+          
+        </div>
+      </p>
+     
+      <p>
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/instalacion_necesaria.png"> <img src="Instalacion/instalacion_necesaria.png"/>  </a> 
+          
+        </div>
+      </p>
+
+      <p>
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/asistente_caracteristica.png"> <img src="Instalacion/asistente_caracteristica.png"/>  </a> 
+          
+        </div>
+      </p>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>4.</strong> Una vez instalado reinicia Docker :   
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+      </p>
+
+      
+      <p>
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/restartDocker.png"> <img src="Instalacion/restartDocker.png"/>  </a> 
+          
+        </div>
+      </p>
+
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>5.</strong> Ahora abre la configuración de Docker y marca la casilla para que se abra junto a Windows , así no hay que abrir Docker al iniciar el sistema (Docker debe estar funcionando para que el Creador de horarios funcione)  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+         &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+            <br/><br/>
+        
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/docker_open.png">  <img src="Instalacion/docker_open.png"/> <br/> </a> 
+          
+        </div>
+      </p>
+
+      <a name="Descargar"></a>
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>6.</strong> Ahora ya podemos descargar e instalar el Creador de horarios . Descárgalo y sigue el asistente o usa la versión portable : &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+         &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+            <br/><br/>
+          <a href="https://micloud.movistar.es/share/O7MmabTNfxUpA4Bz" class="centrar_texto" title="Descargar" target="blanck">Descargar <span class="icon-link-ext"></span></a>
+          
+
+      </p>
+
+
+
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>7.</strong> Una vez instalado , abre la aplicación (el Creador de horarios) . Se ejecutará un comando Docker automáticamente que creará un contenedor Docker con el servidor 
+        de bases de datos MySQL (este comando se ejecuta siempre que abres la aplicación) . 
+        Es probable que la aplicación de un error , ignoralo y espera a que se cree el contenedor Docker . Para saber cuando ha terminado debe salirte así cuando esté arrancado (en Docker) : 
+
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/docker_corriendo.png"> <img src="Instalacion/docker_corriendo.png"/> <br/>  </a> 
+          
+        </div>
+
+        <p>
+        La primera vez que instalas el Creador de horarios , es probable que no tengas este contenedor , por lo que la primera vez tarda un poco más , ya que tiene que descargarlo . Después se abre más rápido .
+        </p>
+        <p>
+          Si aún no ha terminado debería salirte así (si no tienes ningún contenedor abierto) : 
+        </p>
+          
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/docker_vacio.png">  <img src="Instalacion/docker_vacio.png"/> <br/> </a> 
+          
+        </div>
+
+        <p>
+          Nota : El comando Docker que ejecuta automáticamente la aplicación al abrirse es : 
+        </p>
+
+        <p>
+          <code> docker run -d --rm --name mysql -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -v mysql_data:/var/lib/mysql mysql:8.0.23 </code>
+        </p>
+        
+      </p>
+
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>8.</strong> Ahora reincia la aplicación y crea la base de datos usando el botón rojo , que encontrarás en Configuración => Acción de alto impacto ! . Y listo 👍 !!!! &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+         &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+           
+        
+      </p>
+
+      <div class="imagenes">
+        <a class="venobox" href="Instalacion/accion_de_alto_impacto.png"> <img src="Instalacion/accion_de_alto_impacto.png"/> <br/>  </a> 
+        
+      </div>
+    <br/><br/>
+    </article>
+
+    
+
+
+  </section>
+
+
+  
+  <section class="separacion_entre_cajones">
+    <a name="Ayuda"></a>
+    <h2>Ayuda</h2>
+    
+    <article>
+      <a name="como_crear_un_horario"></a>
+      <h3>Cómo crear un horario </h3>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>1.</strong> Ve a la pantalla principal <br/><br/>
+        <i class="fi-rr-minus-small"></i> <strong>2.</strong> Pulsa en añadir fila <br/><br/>
+        <i class="fi-rr-minus-small"></i> <strong>3.</strong> Ahora ya tienes un horario creado con nombre vacío . Haz doble click en el nombre para editarlo y después pulsa Enter o haz click en otro sitio dentro de la tabla para guardarlo
+            (Las fechas son automáticas , no hay que modificarlas) <br/><br/>
+
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/crear_horario.png">  <img src="Instalacion/crear_horario.png"/> <br/> </a> 
+          
+        </div>
+      </p>
+      
+    </article>
+
+    <article>
+      <a name="como_entrar_en_un_horario"></a>
+      <h3>Cómo entrar en un horario </h3>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>1.</strong> En la pantalla principal , pulsa el botón Entrar del horario al que quieras entrar<br/><br/>
+        <i class="fi-rr-minus-small"></i> <strong>2.</strong> Comprueba que estás en el horario correcto (mira el nombre) <br/><br/>
+
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/entrar_en_horario.png">  <img src="Instalacion/entrar_en_horario.png"/> <br/> </a> 
+          
+        </div>
+        <br/><br/>
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/en_horario.png"> <img src="Instalacion/en_horario.png"/> <br/>  </a> 
+          
+        </div>
+      </p>
+      
+    </article>
+
+    <article>
+      <a name="como_añadir_tramos_horarios_a_un_horario"></a>
+      <h3>Cómo añadir tramos horarios a un horario </h3>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>1.</strong>Una vez que estés dentro de un horario , pulsa en Añadir fila y se creará una plantilla vacía que puedes rellenar haciendo docble click para editar <br/><br/>
+        Nota : Los tramos horarios no se pueden eliminar
+        <br/>
+        
+
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/añadir_tramo_horario.png">  <img src="Instalacion/añadir_tramo_horario.png"/> <br/>  </a> 
+         
+        </div>
+
+      </p>
+      
+    </article>
+
+    <article>
+      <a name="como_activar_el_bloqueo_de_edición_de_horarios"></a>
+      <h3>Cómo activar el bloqueo de edición de horarios </h3>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>1.</strong>Una vez que estés dentro de un horario , pulsa en el botón del candado . Se deshabilitará la edición de la tabla y se quita el botón de añadir fila  <br/><br/>        
+
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/bloqueo.png"> <img src="Instalacion/bloqueo.png"/> <br/>  </a> 
+          
+        </div>
+
+        <br/><br/>
+
+        
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/bloqueo_activado.png">  <img src="Instalacion/bloqueo_activado.png"/> <br/> </a> 
+          
+        </div>
+
+      </p>
+      
+    </article>
+
+
+    <article>
+      <a name="como_imprimir_un_horario"></a>
+      <h3>Cómo imprimir un horario </h3>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>1.</strong>Una vez que estés dentro de un horario , pulsa en el botón de la impresora :  <br/><br/>        
+
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/imprimir.png">  <img src="Instalacion/imprimir.png"/> <br/>  </a> 
+          
+        </div>
+
+        <br/>
+
+      </p>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>2.</strong> Sigue las recomendaciones que se indican a continuación para obtener un mejor resultado de impresión : &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+         &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+           
+        
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/impresora_info.png">  <img src="Instalacion/impresora_info.png"/> <br/> </a> 
+          
+        </div>
+      </p>
+
+      <a name="imprimir_un_horario_Paso_3"></a>
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>3.</strong> En la pestaña general , selecciona la impresora . En este caso vamos a imprimir por lo que elegimos una impresora : 
+           
+        
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/imprimiendo.png">  <img src="Instalacion/imprimiendo.png"/> <br/> </a> 
+          
+        </div>
+      </p>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>4.</strong> En la pestaña page setup , seleccionamos el tamaño y la horientación y pulsa en Imprimir/Print: 
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/imprimiendo_ultimo_paso.png">  <img src="Instalacion/imprimiendo_ultimo_paso.png"/> <br/> </a> 
+          
+        </div>
+      </p>
+      
+    </article>
+
+    <article>
+      <a name="como_generar_un_horario_en_formato_PDF"></a>
+      <h3>Cómo generar un horario en formato PDF </h3>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>1.</strong>Sigue los mismos pasos que se hacen para  <a href="#como_imprimir_un_horario" title="imprimir un horario" target="">imprimir un horario <span class=""></span></a>  excepto en el paso  <a href="#imprimir_un_horario_Paso_3" title="paso 3." target=""><strong>3.</strong> <span class=""></span></a>  en el que tienes que seleccionar <strong>Microsoft Print to PDF</strong>  :  <br/><br/>        
+
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/pdf.png">  <img src="Instalacion/pdf.png"/> <br/> </a> 
+          
+        </div>
+
+        <br/>
+
+      </p>
+      
+
+    </article>
+
+
+    <article>
+      <a name="como_borrar_un_horario"></a>
+      <h3>Cómo borrar un horario </h3>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>1.</strong> Ve a la pantalla principal y pulsa en el botón borrar fila :  <br/><br/>        
+
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/borrar_horario.png">  <img src="Instalacion/borrar_horario.png"/> <br/> </a> 
+          
+        </div>
+
+        <br/>
+
+      </p>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>2.</strong> Selecciona de la lista el que quieras borrar y pulsa borrar . La aplicación se reiniciará automáticamente y ya estará borrado :   <br/><br/>        
+
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/borrando_horario.png">  <img src="Instalacion/borrando_horario.png"/> <br/> </a> 
+          
+        </div>
+
+        <br/><br/>
+
+      </p>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>3.</strong> Y listo 👍 :         
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        
+        <br/><br/> 
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/borrado.png">  <img src="Instalacion/borrado.png"/> <br/> </a> 
+          
+        </div>
+
+        <br/>
+
+      </p>
+
+    </article>
+
+
+    <article>
+      <a name="como_hacer_una_copia_de_seguridad_de_los_datos"></a>
+      <h3>Cómo hacer una copia de seguridad de los datos </h3>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>1.</strong> La copia de seguridad debe hacerse de forma manual . Para hacerlo abre el CMD y ejecuta el siguiente comando Docker (el cual creará un contenedor Docker con phpMyAdmin) 
+        <br/><br/> La primera vez que ejecutes el comando tardará un poco ya que no tienes el contenedor descargado , después será más rápido : <br/><br/>        
+        <code>docker run -d --rm --name phpmyadmin --link mysql:db -p 8888:80 phpmyadmin/phpmyadmin</code>
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/cmd.png">  <img src="Instalacion/cmd.png"/> <br/> </a> 
+          
+        </div>
+
+        <br/><br/>
+
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/cmd_comando_Docker.png">  <img src="Instalacion/cmd_comando_Docker.png"/> <br/> </a> 
+          
+        </div>
+      </p>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>2.</strong> Cuando termine el comando , abre Docker y deberías ver este contenedor :         
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        
+        <br/><br/>  
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/docker_contenedores.png"> <img src="Instalacion/docker_contenedores.png"/> <br/>  </a> 
+          
+        </div>
+
+        <br/>
+
+      </p>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>3.</strong> Pon el ratón sobre él y dale al botón para abrir en el navegador :  
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        <br/><br/>        
+
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/docker_abrir_en_navegador.png">  <img src="Instalacion/docker_abrir_en_navegador.png"/> <br/>  </a> 
+          
+        </div>
+
+        <br/>
+
+      </p>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>4.</strong> Se te abrirá en el navegador la aplicación de phpMyAdmin en la que deberías ver la base de datos de la aplicación (la cual se llama <code> creadorDe_horarios_dataBase </code>):   <br/><br/>        
+        </p>
+          <p>
+            Nota : Si no estabas logueado , el usuario y contraseña por defecto es <strong> <code> root </code> </strong> .
+
+            <div class="imagenes">
+              <a class="venobox" href="Instalacion/loguin_phpMyAdmin.png">  <img src="Instalacion/loguin_phpMyAdmin.png"/> <br/> </a> 
+              
+            </div>
+            <br/><br/>
+        </p>
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/phpMyAdmin.png">  <img src="Instalacion/phpMyAdmin.png"/> <br/> </a> 
+          
+        </div>
+        
+        <br/>
+
+    
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>5.</strong> Selecciona la base de datos y pulsa el botón Exportar : 
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        <br/><br/>        
+
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/exportar.png">  <img src="Instalacion/exportar.png"/> <br/> </a> 
+          
+        </div>
+
+        <br/>
+
+      </p>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>6.</strong> Una vez dentro deja todo por defecto y pulsa el botón Continuar :  
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        <br/><br/>        
+
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/exportando.png">  <img src="Instalacion/exportando.png"/> <br/> </a> 
+          
+        </div>
+
+        <br/>
+
+      </p>
+
+      <p>
+        <i class="fi-rr-minus-small"></i> <strong>7.</strong> Se te descargará un archivo .sql . Esa es la copia de seguridad : 
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        <br/><br/>        
+
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/exportado.png">  <img src="Instalacion/exportado.png"/> <br/> </a> 
+          
+        </div>
+
+        <br/>
+
+      </p>
+
+
+    </article>
+
+
+  </article>
+
+
+  <article>
+    <a name="como_restaurar_una_copia_de_seguridad"></a>
+    <h3>Cómo restaurar una copia de seguridad </h3>
+
+    <p>
+      <i class="fi-rr-minus-small"></i> <strong>1.</strong> Para poder hacer este paso debes de tener un archivo .sql que abrás generado en el  <a href="#como_hacer_una_copia_de_seguridad_de_los_datos" title="Cómo hacer una copia de seguridad de los datos" target=""> paso anterior   <span class=""></span></a>
+      <br/><br/>        
+    </p>
+
+    <p>
+      <i class="fi-rr-minus-small"></i> <strong>2.</strong> Sigue los pasos de <a href="#como_hacer_una_copia_de_seguridad_de_los_datos" title="Cómo hacer una copia de seguridad de los datos" target=""> Cómo hacer una copia de seguridad de los datos <span class=""></span></a>  
+      hasta el paso 4 .
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+  
+      <br/>
+
+    </p>
+
+    <p>
+      <i class="fi-rr-minus-small"></i> <strong>3.</strong> Una vez seleccionada la base de datos de la aplicación <code> creadorDe_horarios_dataBase  </code> 
+      Pulsa en seleccionar todo y elige la opción eliminar:  
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+      <br/><br/>        
+
+      <div class="imagenes">
+        <a class="venobox" href="Instalacion/restaurar.png">  <img src="Instalacion/restaurar.png"/> <br/>  </a> 
+        
+      </div>
+
+      <br/>
+
+    </p>
+
+    <p>
+      <i class="fi-rr-minus-small"></i> <strong>4.</strong> En esta pregunta deja la casilla por defecto y pulsa en sí:          
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; <br/><br/>
+      <div class="imagenes">
+        <a class="venobox" href="Instalacion/eliminar_tablas.png">  <img src="Instalacion/eliminar_tablas.png"/> <br/>  </a> 
+        
+      </div>
+
+      <br/>
+
+    </p>
+
+
+    <p>
+      <i class="fi-rr-minus-small"></i> <strong>5.</strong> Ahora selecciona de nuevo la base de datos de la aplicación <code>creadorDe_horarios_dataBase</code> y pulsa en Importar : 
+      
+      <br/><br/>        
+
+      <div class="imagenes">
+        <a class="venobox" href="Instalacion/selecciona_BD.png">  <img src="Instalacion/selecciona_BD.png"/> <br/>  </a> 
+        
+      </div>
+
+      <br/>
+
+    </p>
+
+    <p>
+      <i class="fi-rr-minus-small"></i> <strong>6.</strong> Selecciona el archivo .sql que se generó en la copia de seguridad y pulsa continuar :  
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+      <br/><br/>        
+
+      <div class="imagenes">
+        <a class="venobox" href="Instalacion/selecciona_sql.png">  <img src="Instalacion/selecciona_sql.png"/> <br/> </a> 
+        
+      </div>
+
+      <br/>
+
+    </p>
+
+    <p>
+      <i class="fi-rr-minus-small"></i> <strong>7.</strong> Cuando veas un mensaje como este , ya puedes cerrar phpMyAdmin , ya se ha restaurado la copia de seguridad : 
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+      <br/><br/>        
+
+      <div class="imagenes">
+        <a class="venobox" href="Instalacion/mesaje_como_este.png"> <img src="Instalacion/mesaje_como_este.png"/> <br/>  </a> 
+        
+      </div>
+
+      <br/>
+
+    </p>
+
+
+  </article>
+
+  </section>
+
+
+  <section class="separacion_entre_cajones">
+    <a name="Demo"></a>
+    <h2>Demo</h2>
+
+    <article>
+      <a name="datos_de_ejemplo"></a>
+      <h3>Datos de ejemplo  </h3>
+     
+      <p>
+        Usa estos datos de ejemplo para probar como funciona la aplicación .
+      </p>
+      <br/>
+      <p>
+        Contiene dos horarios .
+      </p>
+      <br/>
+      <p>
+        Nota : Para usar los datos de ejemplo sigue los pasos de <a href="#como_restaurar_una_copia_de_seguridad" title="Cómo restaurar una copia de seguridad" target=""> Cómo restaurar una copia de seguridad   <span class=""></span></a>
+        y en el paso 6 selecciona el archivo .sql que te has descargado en la Demo.
+      </p>
+      <br/>
+      <p>
+        Nota : Si no tienes la base de datos puedes crearla desde la aplicación Creador de horarios en Configuración => Acción de alto impacto !  . Para hacer esto pudes seguir los pasos de la captura de abajo :
+      </p>
+      <br/>
+      <p>
+        <div class="imagenes">
+          <a class="venobox" href="Instalacion/demo_info.png">  <img src="Instalacion/demo_info.png"/> <br/>  </a> 
+          
+        </div>
+      </p>
+      <p class="centrar_texto">
+        <a href="https://micloud.movistar.es/share/C6Q0iF6a9Hw0KG32" title="Descargar datos de ejemplo" target="blanck">Descargar datos de ejemplo <span class="icon-link-ext"></span></a>
+      </p>
+     
+    </article>
+
+
+    <article>
+      <a name="ejemplo_de_PDF_generados_con_la_aplicación"></a>
+      <h3>Ejemplo de PDF generados con la aplicación  </h3>
+     
+      <p>
+        Estos son unos ejemplos de PDF generados con la aplicación Creador de horarios .
+      </p>
+      <br/>
+      <p>
+        Nota : Los pdf en horizontal se generan de forma nativa en horizontal acostado . Para cambiarlo a horizontal de pie recomiendo esta aplicación web : 
+      </p>
+      <p class="centrar_texto">
+        <a href="https://smallpdf.com/es/girar-pdf" title="Girar PDF" target="blanck">Girar PDF <span class="icon-link-ext"></span></a>
+      </p>
+      <p class="centrar_texto">
+        <a href="https://micloud.movistar.es/share/xQ2nfsd9jNG9Ubcf" title="Ver PDF de ejemplo" target="blanck">Ver PDF de ejemplo <span class="icon-link-ext"></span></a>
+      </p>
+     
+    </article>
+
+    
+  </section>
+
+
+
+
+
+  <section class="separacion_entre_cajones">
+    <a name="historial_de_actualizaciones"></a>
+    <h2>Historial de actualizaciones</h2>
+
+    <article>
+      <a name="versiones"></a>
+      <h3>Versiones  </h3>
+     
+      <p>
+        <div class="caja">
+          <ul class="lineatiempo">
+             
+            
+            <li>
+              <div class="elemento">
+                  <a name="version_actual"></a>
+                  <span> v.7.9.5 (27/06/2021) </span>  &nbsp; &nbsp; <span>📌 Actual</span> <br/><br/> 
+                  <p> 
+                    - Se han añadido los enlaces de ayuda en la configuración .
+                  </p>
+              </div>
+          </li>
+
+
+
+              <li>
+                  <div class="elemento">
+                      <a name="version_actual"></a>
+                      <span> v.7.9.4 (21/06/2021) </span>  <br/><br/> 
+                      <p> 
+                        - Se ha solucionado un bug que hacía que al borrar un horario , se borraran tramos horarios de otros horarios también .
+                      </p>
+                  </div>
+              </li>
+
+
+          
+
+          </ul>
+        </div>
+
+
+
+        
+      </p>
+    
+    </article>
+
+    
+  </section>
+
+
+
+
+  <section class="separacion_entre_cajones">
+    <a name="Licencia"></a>
+    <h2>Licencia</h2>
+
+    <article>
+      <a name="informacion_sobre_la_licencia"></a>
+      <h3>Información sobre la licencia  </h3>
+     
+      <p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+          <img class="licencia"
+            alt="Licencia de Creative Commons" style="border-width:0"
+            src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+          
+          </a><br/><br />Los contenidos de esta web estan bajo una <a rel="license"
+          href="http://creativecommons.org/licenses/by-nc-sa/4.0/">licencia de Creative Commons
+          Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.
+      </p>
+    
+    </article>
+
+    
+  </section>
+
+  
+  <section class="separacion_entre_cajones">
+    <a name="Autor"></a>
+    <h2>Autor</h2>
+    
+    <article>
+      <a name="Juan_Manuel_Torres_Martinez"></a>
+      <h3>Juan Manuel Torres Martínez </h3>
+
+      <p class="social-icons"><a href="https://www.linkedin.com/in/juanmanueltorresmart%C3%ADnez/" target="blanck"> <img style="width: 25px;" src="../../../../iconos/svg/linkedin.svg"/> </a></p>
+      <p class="social-icons"><a href="https://github.com/juanmatorres-dev" target="blanck"> <img style="width: 25px;" src="../../../../iconos/svg/github.svg"/> </a></p>
+    </article>
+
+ 
+
+
+  </section>
+
+
+
+
+  <!-- Modal de información -->
+
+  <div id="miModal" class="modal">
+    <div class="flex" id="flex">
+        <div class="contenido-modal">
+            <div class="modal-header flex">
+                <h3 class="titulo-modal"><i class="fi-rr-info"></i> &nbsp; text </h3>
+                <span class="close" id="close"><i class=" fi-rr-cross-small"></i></span>
+            </div>
+            <div class="modal-body">
+                <p>  text</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <br/><br/><br/><br/>
+
+
+  <script src="../../../../ventanaModal.js"></script>
+  <script src="js/pushbar.js"></script>
+  <script type="text/javascript">
+    const pushbar = new Pushbar({
+          blur:true,
+          overlay:true,
+        });
+  </script>  
+
+  
+  <script type="text/javascript" src="js/venobox.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.venobox').venobox(); 
+    });
+  </script>
+
+<script type="text/javascript" src="js/cerrarPanel.js"></script>
+
+</body>
+
+</html>
